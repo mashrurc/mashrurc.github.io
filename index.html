@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+<head>
+<body>
+	<h1 id="global">Change to Hello!</h1>
+	<button onclick="changeNow()">Click me to change!</button>
+	<button onclick="last()">Click me to change to previous!!</button>
+</body>
+<script>
+	var change = prompt("What would you like to change it to?")
+	localStorage.setItem("change", change);
+	var changeNow = function(e) {
+		document.getElementById("global").innerHTML = change;
+	}
+	var last = function(e) {
+		document.getElementById("global").innerHTML = localStorage.getItem("change");
+	}
+</script>
+</head>
