@@ -6,10 +6,10 @@
 	<button onclick="last()">Click me to change to previous!!</button>
 </body>
 <script>
-	var change = prompt("What would you like to change it to?")
+	var change = prompt("wHaT iS yOuR nAmE?")
 	localStorage.setItem("change", change);
 	var changeNow = function(e) {
-		document.getElementById("global").innerHTML = change;
+		document.getElementById("global").innerHTML = "Hello, "+change;
 	}
 	var last = function(e) {
 		document.getElementById("global").innerHTML = localStorage.getItem("change");
